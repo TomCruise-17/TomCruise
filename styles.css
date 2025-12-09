@@ -162,22 +162,23 @@ h2::after {
 /* Tombol (General Style) */
 button,
 .card-content a.btn {
-  padding: 10px 25px;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 2px solid var(--primary-color);
-  background-color: var(--primary-color);
-  color: var(--card-background);
-  transition: background-color var(--transition-speed), transform 0.2s, color var(--transition-speed);
-  display: inline-block;
+  padding: 12.5px 20px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #2ba8fb;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 
 button:hover,
 .card-content a.btn:hover {
-  background-color: transparent;
-  color: var(--primary-color);
-  transform: translateY(-2px);
+ background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
 }
 
 /* --- 5. SECTION SPESIFIK --- */
