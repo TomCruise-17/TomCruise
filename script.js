@@ -65,6 +65,15 @@ const githubLink = document.getElementById('github-link');
 const reviewButtons = document.querySelectorAll('.review-btn');
 
 // 1. Membuka Modal Review
+document.querySelectorAll('.review-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const url = this.getAttribute('data-github');
+    if (url) {
+      window.open(url, '_blank'); // buka tab baru
+    }
+  });
+});
+
 reviewButtons.forEach(button => {
   button.addEventListener('click', function () {
     // Ambil data dari atribut data- di tombol
