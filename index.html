@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Mr.TomCruise</div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+      <ul id="nav-menu">
+        <button id="toggle-dark-mode" title="Toggle Dark Mode"
+          style="margin-left: 15px; padding: 5px 10px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-color);">
+          ☀️
+        </button>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#practice">Practice</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Welcome</h1>
+    <p>UI/UX Design / Development</p>
+    <div class="card">
+      <img src="img/mario.png" alt="Profile Picture" class="profile-picture">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Saya adalah seorang programmer yang kuliah di Universitas Pamulang yang sedang mengambil Prodi Ilmu Komputer dan
+      Saya sekarang lagi fokus mengerjakan web, jika anda membutuhkan seseorang yang bisa membuatkan anda porfolio yang
+      modern dan responsif bisa menghubungi saya di contact yang sudah saya berikan di bawah 🤖</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="img/mario.png" alt="Image 1" data-src="https://via.placeholder.com/800x600">
+        <div class="card-content">
+          <h3>Gambar 1</h3>
+          <p>CV.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/Album 1.jpg" alt="Image 2" data-src="https://via.placeholder.com/800x600">
+        <div class="card-content">
+          <h3>Gambar 2</h3>
+          <p>Pemandangan</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/Album 2.jpg" alt="Image 3" data-src="https://via.placeholder.com/800x600">
+        <div class="card-content">
+          <h3>Gambar 3</h3>
+          <p>A brief description of my third project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice">
+    <h2>Practice</h2>
+    <p>Di sini saya membagikan latihan coding dan hasil nya, pada setiap pertemuan.</p>
+    <div class="practice-cards">
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 12</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 12"
+            data-github="https://github.com/TomCruise-17/Pertemuan-12">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 12/Penggunaan_tabel.html" class="task-card" data-pertemuan="12">
+            <img src="Pertemuan 12/Screenshot 2025-11-21 174409.png" alt="Pertemuan 6" class="card-image">
+            <span>Buka Pertemuan 12</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 2</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 2"
+            data-github="https://github.com/TomCruise-17/Pertemuan-2">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 2" class="task-card" data-pertemuan="2">
+            <span>Buka Pertemuan 2</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 3</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 3"
+            data-github="https://github.com/TomCruise-17/Pertemuan-3">
+            Review Proyek
+          </button>
+
+          <a href="Pertemuan 3" class="task-card" data-pertemuan="3">
+            <span>Buka Pertemuan 3</span>
+          </a>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 4</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 4"
+            data-github="https://github.com/TomCruise-17/Pertemuan-4">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 4" class="task-card" data-pertemuan="4">
+            <span>Buka Pertemuan 4</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 5</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 5"
+            data-github="https://github.com/TomCruise-17/Pertemuan-5">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 5" class="task-card" data-pertemuan="5">
+            <span>Buka Pertemuan 5</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 6</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 6"
+            data-github="https://github.com/TomCruise-17/Pertemuan-6">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 6/komponen.html" class="task-card" data-pertemuan="6">
+            <img src="Pertemuan 6/Screenshot 2025-11-21 135326.png" alt="Pertemuan 6" class="card-image">
+            <span>Buka Pertemuan 6</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 7</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 7"
+            data-github="https://github.com/TomCruise-17/Pertemuan-7">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 7/tabel.html" class="task-card" data-pertemuan="7">
+            <img src="Pertemuan 7/Screenshot 2025-11-21 174302.png" alt="Pertemuan 7" class="card-image">
+            <span>Buka Pertemuan 7</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 8</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 8"
+            data-github="https://github.com/TomCruise-17/Pertemuan-8">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 8" class="task-card" data-pertemuan="8">
+            <span>Buka Pertemuan 8</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 10</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 10"
+            data-github="https://github.com/TomCruise-17/Pertemuan-10">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 10" class="task-card" data-pertemuan="10">
+            <span>Buka Pertemuan 10</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 11</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 11"
+            data-github="https://github.com/TomCruise-17/Pertemuan-11">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 11/layout_div.html" class="task-card" data-pertemuan="11">
+            <img src="Pertemuan 11/Screenshot 2025-11-21 174338.png" alt="Pertemuan 11" class="card-image">
+            <span>Buka Pertemuan 11</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 13</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 13"
+            data-github="https://github.com/TomCruise-17/Pertemuan-13">
+            Review Proyek
+          </button>
+          <a href="index.html" class="task-card" data-pertemuan="13">
+            <img src="img/Screenshot 2025-11-21 145154.png" alt="Pertemuan 13" class="card-image">
+            <span>Buka Pertemuan 13</span>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 14</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 14"
+            data-github="https://github.com/TomCruise-17/Pertemuan-14">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 14" class="task-card" data-pertemuan="14">
+            <img src="Pertemuan 14/Screenshot 2025-11-25 220922.png" alt="Pertemuan 14" class="card-image">
+            <span>Buka Pertemuan 14</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Latihan 15</h3>
+          <button class="btn primary-btn review-btn" data-title="Pertemuan 14"
+            data-github="https://github.com/TomCruise-17/Pertemuan15">
+            Review Proyek
+          </button>
+          <a href="Pertemuan 15/index.html" class="task-card" data-pertemuan="14">
+            <span>Buka Pertemuan 15</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <form id="contact-form" action="https://formspree.io/f/xldzkkry" method="POST">
+      <input type="text" name="name" placeholder="Nama Anda" required>
+      <input type="email" name="_replyto" placeholder="Alamat Email Anda" required>
+      <input type="lokasi" name="location" placeholder="Lokasi Anda" required>
+      <textarea name="message" placeholder="Pesan Anda..." rows="6" required></textarea>
+      <button type="submit">Kirim Pesan</button>
+
+      <p id="form-status" style="margin-top: 15px; font-weight: 600;"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Mr. Cruise❤️ | All rights reserved.</p>
+  </footer>
+
+  <!-- Modal for Gallery -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

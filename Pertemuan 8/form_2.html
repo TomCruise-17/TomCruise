@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Free Registration</title>
+  <style>
+    /* overall page */
+    body {
+      background: #f6f8fa;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #222;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* form card to mimic projected paper with blue border */
+    .card {
+      width: 720px;
+      background: #fff;
+      border: 6px solid #4b6fb3;
+      /* blue frame like projection */
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      padding: 28px 36px;
+    }
+
+    h1.title {
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+      color: #243a7a;
+      margin: 6px 0 26px;
+      font-size: 34px;
+      letter-spacing: 1px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    label {
+      width: 140px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid #cfcfcf;
+      border-radius: 3px;
+      font-size: 14px;
+      background: #fbfbff;
+    }
+
+    textarea {
+      min-height: 68px;
+      resize: vertical;
+    }
+
+    /* smaller inline controls */
+    .small {
+      width: 220px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: 400;
+      width: auto;
+    }
+
+    .hobby-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-left: 140px;
+      margin-bottom: 14px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-start;
+      margin-left: 140px;
+      margin-top: 8px;
+    }
+
+    button {
+      padding: 8px 14px;
+      border: 1px solid #888;
+      background: linear-gradient(#f7f7f7, #e9e9e9);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button.cancel {
+      background: #fff;
+    }
+
+    /* small footer "Done" like image */
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #666;
+      text-align: left;
+    }
+
+    @media (max-width: 760px) {
+      .card {
+        width: 95%;
+        padding: 20px;
+      }
+
+      label {
+        width: 120px;
+        font-size: 14px;
+      }
+
+      .hobby-list,
+      .actions {
+        margin-left: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card" role="form" aria-labelledby="formTitle">
+    <h1 id="formTitle" class="title">Free Registration</h1>
+
+    <form>
+      <div class="row">
+        <label for="nama">Nama</label>
+        <input id="nama" name="nama" type="text" placeholder="Masukkan nama lengkap" />
+      </div>
+
+      <div class="row">
+        <label for="tgl">Tgl Lahir</label>
+        <input id="tgl" name="tgl_lahir" type="date" class="small" />
+      </div>
+
+      <div class="row" style="align-items: flex-start;">
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat" placeholder="Alamat lengkap"></textarea>
+      </div>
+
+      <div class="row">
+        <label for="kota">Kota</label>
+        <select id="kota" name="kota" class="small">
+          <option value="">-- Pilih Kota --</option>
+          <option>Jakarta</option>
+          <option>Bandung</option>
+          <option>Surabaya</option>
+          <option>Yogyakarta</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="pekerjaan">Pekerjaan</label>
+        <select id="pekerjaan" name="pekerjaan" class="small">
+          <option value="">-- Pilih Pekerjaan --</option>
+          <option>Pelajar</option>
+          <option>Mahasiswa</option>
+          <option>Karyawan</option>
+          <option>Wirausaha</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label>Jenis Kelamin</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="L" checked> Laki-Laki</label>
+          <label><input type="radio" name="gender" value="P"> Perempuan</label>
+        </div>
+      </div>
+
+      <div class="row" style="align-items: flex-start;">
+        <label>Hobby</label>
+        <div class="hobby-list">
+          <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+          <label><input type="checkbox" name="hobby" value="sport"> Sport</label>
+          <label><input type="checkbox" name="hobby" value="singing"> Singing</label>
+          <label><input type="checkbox" name="hobby" value="traveling"> Traveling</label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Kirim</button>
+        <button type="button" class="cancel" onclick="this.closest('form').reset()">Cancel</button>
+      </div>
+
+      <div class="footer">Done</div>
+    </form>
+  </div>
+</body>
+
+</html>

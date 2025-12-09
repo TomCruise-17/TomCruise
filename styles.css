@@ -1,0 +1,412 @@
+/* --- 1. VARIABEL CSS UNTUK TEMA (MEMUNGKINKAN DARK MODE) --- */
+:root {
+  --primary-color: #007bff;
+  --accent-color: #ffc107;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --text-color: #212529;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+
+  --font-family: 'Poppins', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* DARK MODE COLORS */
+/* Selector 'body.dark-mode' akan diterapkan oleh JavaScript */
+body.dark-mode {
+  --primary-color: #1e90ff;
+  --accent-color: #ffd700;
+  --background-color: #121212;
+  --card-background: #1e1e1e;
+  --text-color: #e0e0e0;
+  --border-color: #333333;
+  --shadow-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- 2. RESET DAN GLOBAL STYLES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--card-background);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* --- 3. HEADER DAN NAVIGASI --- */
+header {
+  background-color: var(--card-background);
+  box-shadow: 0 2px 10px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Navigation Menu */
+#nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#nav-menu li a {
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom var(--transition-speed), color var(--transition-speed);
+}
+
+#nav-menu li a:hover,
+#nav-menu li a.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  /* Sembunyikan di desktop */
+  cursor: pointer;
+  padding: 10px 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--text-color);
+  transition: all var(--transition-speed);
+}
+
+
+/* --- 4. SECTION UMUM --- */
+section {
+  padding: 80px 5%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Tombol (General Style) */
+button,
+.card-content a.btn {
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--card-background);
+  transition: background-color var(--transition-speed), transform 0.2s, color var(--transition-speed);
+  display: inline-block;
+}
+
+button:hover,
+.card-content a.btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* --- 5. SECTION SPESIFIK --- */
+
+/* Home/Hero Section */
+#home {
+  background-color: var(--card-background);
+  padding-top: 150px;
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+/* Gallery & Practice Section Grid */
+.gallery,
+.practice-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Card Styling */
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s ease-in-out;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.file-list {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+/* Contact Form */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-family: var(--font-family);
+  background-color: var(--card-background);
+  color: var(--text-color);
+  transition: border-color var(--transition-speed);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* --- 6. MODAL (Gallery Image Popup) --- */
+.modal {
+  display: none;
+  /* Disembunyikan secara default oleh JS */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 8px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* --- 7. FOOTER --- */
+footer {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 20px 5%;
+  font-size: 0.9rem;
+}
+
+/* --- 8. MEDIA QUERIES (RESPONSIVITAS) --- */
+@media (max-width: 768px) {
+
+  /* Hamburger & Nav Toggle */
+  .hamburger {
+    display: block;
+    /* Tampilkan di mobile */
+  }
+
+  #nav-menu {
+    /* Sembunyikan secara default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--card-background);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 4px 5px var(--shadow-color);
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition-speed) ease-in-out;
+  }
+
+  #nav-menu.show {
+    /* Tampilkan saat kelas 'show' ditambahkan oleh JS */
+    height: 250px;
+    /* Atur tinggi tetap yang cukup untuk semua link */
+    padding: 10px 0;
+  }
+
+  #nav-menu li a {
+    padding: 10px 5%;
+    border-bottom: none;
+    display: block;
+    text-align: left;
+  }
+
+  /* Penyesuaian Teks */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 60px 5%;
+    min-height: auto;
+  }
+
+  /* Penyesuaian Modal */
+  .modal-content {
+    width: 95%;
+  }
+}
+
+
+/* Animasi Hamburger ke X */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ... kode untuk #nav-menu dan media query ... */

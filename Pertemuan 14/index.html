@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KALKULATOR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .kalkulator-container {
+      width: 500px;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header h3 {
+      margin: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .input-col {
+      flex: 1;
+      padding: 0 10px;
+    }
+
+    .input-col label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .input-col input,
+    .input-col select {
+      width: calc(100% - 10px);
+      padding: 5px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+    }
+
+    .operator-select {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .operator-select select {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      float: right;
+      margin-top: 20px;
+    }
+
+    .welcome-msg {
+      text-align: right;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="kalkulator-container">
+    <div class="header">
+      <h3>Operasi Aritmatika</h3>
+    </div>
+
+
+    <div class="content">
+      <div class="input-group">
+        <div class="input-col">
+          <label for="nilai1">Nilai I</label>
+          <input type="number" id="nilai1" value="0">
+    </div>
+    <div class="input-group">
+        <div class="input-col operator-select">
+          <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+          </select>
+        </div>
+        <div class="input-col">
+          <label for="nilai2">Nilai II</label>
+          <input type="number" id="nilai2" value="0">
+        </div>
+      </div>
+
+        <div class="input-col" style="text-align: right;">
+          <button class="submit-btn" onclick="hitung()">Submit</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 10px;">
+        <h4>Hasil: <span id="hasil"></span></h4>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

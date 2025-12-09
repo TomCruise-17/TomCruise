@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Alert</title>
+</head>
+<body>
+  <script language="JavaScript" type="text/javascript">
+    nama = prompt("Masukkan nama Anda");
+    panjang = prompt("Masukan panjang", "25");
+    lebar = prompt("Masukan lebar", "");
+
+    // luas = parseInt(panjang) * parseInt(lebar);  // parseInt
+    luas = panjang * lebar; // parseFloat otomatis dari prompt
+
+    document.write("<font size=5 color='blue'>Luas Persegi Panjang</font><br>");
+    document.write("<br>");
+    document.write("Programmer = " + nama + "<br>");
+    document.write("Panjang = " + panjang + " cm<br>");
+    document.write("Lebar = " + lebar + " cm<br>");
+    document.write("Luas = " + panjang + " * " + lebar + " = " + luas +
+    "cm<sup>2</sup><br>");
+</script>
+</body>
+</html>

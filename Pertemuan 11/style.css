@@ -1,0 +1,85 @@
+/* Pusatkan wrapper dan atur lebar */
+#wrapper {
+    margin: 0 auto;
+    width: 80%;
+    border: 2px solid black;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* Header */
+  #header {
+    height: 60px;
+    line-height: 60px;
+    border: 2px solid blue;
+    margin-bottom: 10px;
+  }
+  
+  /* Area utama */
+  #main {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Sidebar kiri */
+  #sidebar {
+    width: 20%;
+    border: 2px solid red;
+    height: 300px;
+    line-height: 300px;
+  }
+  
+  /* Konten tengah */
+  #content {
+    width: 55%;
+    border: 2px solid green;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Bagian atas dalam konten */
+  #top {
+    height: 60px;
+    border: 2px solid purple;
+    margin-bottom: 10px;
+    line-height: 60px;
+  }
+  
+  /* Dua kolom di dalam konten */
+  #inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Kotak kiri dalam konten */
+  #inner2 {
+    width: 48%;
+    height: 200px;
+    border: 2px solid orange;
+    line-height: 200px;
+  }
+  
+  /* Kotak kanan dalam konten */
+  #sidebar2 {
+    width: 48%;
+    height: 200px;
+    border: 2px solid brown;
+    line-height: 200px;
+  }
+  
+  /* Kolom kanan */
+  #right {
+    width: 20%;
+    border: 2px solid blue;
+    height: 300px;
+    line-height: 300px;
+  }
+  
+  /* Footer */
+  #footer {
+    clear: both;
+    height: 60px;
+    line-height: 60px;
+    border: 2px solid black;
+    margin-top: 10px;
+  }
