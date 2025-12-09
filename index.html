@@ -19,10 +19,28 @@
 
       </div>
       <ul id="nav-menu">
-        <button id="toggle-dark-mode" title="Toggle Dark Mode"
-          style="margin-left: 15px; padding: 5px 10px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-color);">
-          ☀️
-        </button>
+        <label class="cosmic-toggle">
+          <input class="toggle" type="checkbox" />
+          <div class="slider">
+            <div class="cosmos"></div>
+            <div class="energy-line"></div>
+            <div class="energy-line"></div>
+            <div class="energy-line"></div>
+            <div class="toggle-orb">
+              <div class="inner-orb"></div>
+              <div class="ring"></div>
+            </div>
+            <div class="particles">
+              <div style="--angle: 30deg" class="particle"></div>
+              <div style="--angle: 60deg" class="particle"></div>
+              <div style="--angle: 90deg" class="particle"></div>
+              <div style="--angle: 120deg" class="particle"></div>
+              <div style="--angle: 150deg" class="particle"></div>
+              <div style="--angle: 180deg" class="particle"></div>
+            </div>
+          </div>
+        </label>
+
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#gallery">Gallery</a></li>

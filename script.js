@@ -17,43 +17,32 @@ navLinks.forEach(link => {
   });
 });
 
-const toggleDarkModeBtn = document.getElementById('toggle-dark-mode');
+// Ambil elemen toggle
+const cosmicToggle = document.querySelector(".cosmic-toggle .toggle");
 const body = document.body;
 
-// 1. Cek preferensi sistem saat halaman dimuat
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-const currentTheme = localStorage.getItem('theme');
+// Load tema dari localStorage saat halaman pertama kali dibuka
+let savedTheme = localStorage.getItem("theme");
 
-if (currentTheme === 'dark') {
-  body.classList.add('dark-mode');
-  toggleDarkModeBtn.textContent = '🌙';
-} else if (currentTheme === 'light') {
-  body.classList.remove('dark-mode');
-  toggleDarkModeBtn.textContent = '☀️';
-} else if (prefersDarkScheme.matches) {
-  // Jika tidak ada preferensi di localStorage, ikuti preferensi sistem
-  body.classList.add('dark-mode');
-  toggleDarkModeBtn.textContent = '🌙';
+if (savedTheme === "dark") {
+  body.classList.add("dark-mode");
+  cosmicToggle.checked = true;
 } else {
-  toggleDarkModeBtn.textContent = '☀️';
+  body.classList.remove("dark-mode");
+  cosmicToggle.checked = false;
 }
 
-
-// 2. Event Listener untuk tombol
-toggleDarkModeBtn.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-
-  // Perbarui ikon dan simpan preferensi di localStorage
-  let theme = 'light';
-  if (body.classList.contains('dark-mode')) {
-    theme = 'dark';
-    toggleDarkModeBtn.textContent = '🌙';
+// Event ketika toggle ditekan
+cosmicToggle.addEventListener("change", () => {
+  if (cosmicToggle.checked) {
+    body.classList.add("dark-mode");
+    localStorage.setItem("theme", "dark");
   } else {
-    toggleDarkModeBtn.textContent = '☀️';
+    body.classList.remove("dark-mode");
+    localStorage.setItem("theme", "light");
   }
-
-  localStorage.setItem('theme', theme);
 });
+
 
 // --- D. IMPLEMENTASI MODAL REVIEW PROYEK BARU ---
 
