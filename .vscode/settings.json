@@ -1,8 +1,4 @@
 {
   "liveServer.settings.port": 5501,
-  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-  "print.alternateBrowser.path": "",
-  "print.alternateBrowser.enable": true,
-  "liveServer.settings.CustomBrowser": "chrome",
-  "livePreview.customExternalBrowser": "Edge"
+  "liveServer.settings.CustomBrowser": "chrome"
 }
