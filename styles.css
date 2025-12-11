@@ -717,7 +717,7 @@ footer {
 }
 
 /* From Uiverse.io by chase2k25 */
-.main {
+.social-media-container .main {
   display: flex;
   flex-direction: column;
   gap: 0.75em;
