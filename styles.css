@@ -717,6 +717,11 @@ footer {
 }
 
 /* From Uiverse.io by chase2k25 */
+.social-media-container {
+  /* Tambahkan margin atas agar ada jarak dari form */
+  margin-top: 40px;
+}
+
 .social-media-container .main {
   display: flex;
   flex-direction: column;
