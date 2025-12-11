@@ -717,14 +717,18 @@ footer {
 }
 
 /* From Uiverse.io by chase2k25 */
-.main {
+.social-media-container {
+  margin-top: 40px;
+}
+
+.social-media-container .main {
   display: flex;
   flex-direction: column;
   gap: 0.75em;
 }
 
-.up,
-.down {
+.social-media-container .up,
+.social-media-container .down {
   display: flex;
   flex-direction: row;
   gap: 0.75em;
