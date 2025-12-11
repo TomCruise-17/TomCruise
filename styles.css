@@ -774,30 +774,30 @@ footer {
   padding-right: 12px;
 }
 
-.social-media-container .instagram,
-.social-media-container .twitter,
-.social-media-container .github,
-.social-media-container .discord {
+.instagram,
+.twitter,
+.github,
+.discord {
   transition: fill 0.2s ease-in-out;
 }
 
-.social-media-container .instagram {
+.instagram {
   fill: #e1306c;
 }
 
-.social-media-container .twitter {
+.twitter {
   fill: #1da1f2;
 }
 
-.social-media-container .github {
+.github {
   fill: #333;
 }
 
-.social-media-container .whatsapp {
+.whatsapp {
   fill: #00a849;
 }
 
-.social-media-container .card:hover {
+.card:hover {
   cursor: pointer;
   transform: translate(-6px, -6px);
   box-shadow: 12px 12px 0px #2d2d2d;
