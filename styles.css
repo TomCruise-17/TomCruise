@@ -799,22 +799,22 @@ footer {
   box-shadow: 12px 12px 0px #2d2d2d;
 }
 
-.social-media-container .card1:hover {
+.card1:hover {
   background-color: #fd1d1d;
 }
 
-.social-media-container .card2:hover {
+.card2:hover {
   background-color: #24a0ed;
 }
 
-.social-media-container .card3:hover {
+.card3:hover {
   background-color: #f7b733;
 }
 
-.social-media-container .card4:hover {
+.card4:hover {
   background-color: #4cd137;
 }
 
-.social-media-container .card:hover svg {
+.card:hover svg {
   fill: white;
 }
