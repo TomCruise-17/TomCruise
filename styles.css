@@ -812,3 +812,6 @@ footer {
 .card:hover svg {
   fill: white;
 }
+.social-media-container {
+  margin-top: 40px;
+}
