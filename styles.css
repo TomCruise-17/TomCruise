@@ -723,9 +723,7 @@ footer {
 .social-login-icons {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  margin-top: 30px;
   -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
 }
 
@@ -755,7 +753,7 @@ footer {
 }
 
 .socialcontainer {
-  height: 50px;
+  height: 80px;
   overflow: hidden;
 }
 
@@ -780,7 +778,7 @@ footer {
 }
 
 .socialcontainer:hover .social-icon-1 {
-  transform: translateY(-50px);
+  transform: translateY(-70px);
 }
 
 .socialcontainer:hover .social-icon-1 svg,
@@ -800,7 +798,7 @@ footer {
 }
 
 .socialcontainer:hover .social-icon-2 {
-  transform: translateY(-50px);
+  transform: translateY(-70px);
 }
 
 .social-icon-3 {
@@ -810,7 +808,7 @@ footer {
 }
 
 .socialcontainer:hover .social-icon-3 {
-  transform: translateY(-50px);
+  transform: translateY(-70px);
 }
 
 .social-icon-4 {
@@ -823,5 +821,5 @@ footer {
 }
 
 .socialcontainer:hover .social-icon-4 {
-  transform: translateY(-50px);
+  transform: translateY(-70px);
 }
