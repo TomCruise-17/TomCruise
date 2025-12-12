@@ -12,8 +12,6 @@
   --transition-speed: 0.3s;
 }
 
-/* DARK MODE COLORS */
-/* Selector 'body.dark-mode' akan diterapkan oleh JavaScript */
 body.dark-mode {
   --background-color: #121212;
   --card-background: #1e1e1e;
@@ -820,4 +818,19 @@ footer {
 
 .socialcontainer:hover .social-icon-4 {
   transform: translateY(-70px);
+}
+
+/* --- FIX ICON UNTUK DARK MODE --- */
+body.dark-mode .social-login-icons svg,
+body.dark-mode .icon svg {
+  fill: #fff !important;
+  opacity: 1 !important;
+}
+
+/* Jika latar icon hitam, ganti jadi lebih terang */
+body.dark-mode .social-icon-1,
+body.dark-mode .social-icon-2,
+body.dark-mode .social-icon-3,
+body.dark-mode .social-icon-4 {
+  filter: brightness(1.4);
 }
