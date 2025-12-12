@@ -21,9 +21,6 @@ body.dark-mode {
   --border-color: #333;
   --shadow-color: rgba(255, 255, 255, 0.05);
 
-  body.dark-mode .social-login-icons .icon svg {
-    fill: var(--text-color);
-  }
 }
 
 
