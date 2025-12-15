@@ -987,3 +987,37 @@ body.dark-mode .social-icon-4 {
     filter: hue-rotate(0deg);
   }
 }
+
+/* === MATRIX BACKGROUND === */
+.jp-matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #05050a;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  grid-auto-rows: 40px;
+  font-size: 32px;
+  color: rgba(0, 150, 255, 0.4);
+  font-family: "Courier New", monospace;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.jp-matrix span {
+  animation: smooth-pulse 3s infinite ease-in-out;
+}
+
+@keyframes smooth-pulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
