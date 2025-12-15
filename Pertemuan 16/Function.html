@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas Function & Array</title>
+</head>
+
+<body>
+    <h2>Menu Pilihan</h2>
+    <p>[1] Menghitung Kalkulator</p>
+    <p>[2] Menghitung Luas Trapesium</p>
+    <p>[3] Menghitung Deret Bilangan</p>
+    <p>[4] Perkalian dengan Function</p>
+
+    <label>Pilihan Anda : </label>
+    <input type="number" id="menu">
+    <button onclick="pilihMenu()">Pilih</button>
+
+    <hr>
+    <div id="output"></div>
+
+    <script>
+        function pilihMenu() {
+            let pilihan = document.getElementById("menu").value;
+            let output = document.getElementById("output");
+
+            if (pilihan == 1) {
+                kalkulator();
+            } else if (pilihan == 2) {
+                luasTrapesium();
+            } else if (pilihan == 3) {
+                deretBilangan();
+            } else if (pilihan == 4) {
+                perkalian();
+            } else {
+                output.innerHTML = "<b>Pilihan tidak valid!</b>";
+            }
+        }
+
+        function kalkulator() {
+            let a = parseFloat(prompt("Masukkan angka pertama:"));
+            let b = parseFloat(prompt("Masukkan angka kedua:"));
+            let operasi = prompt("Pilih operasi (+, -, *, /):");
+
+            let hasil;
+
+            if (operasi == "+") hasil = a + b;
+            else if (operasi == "-") hasil = a - b;
+            else if (operasi == "*") hasil = a * b;
+            else if (operasi == "/") hasil = a / b;
+            else hasil = "Operasi tidak valid";
+
+            document.getElementById("output").innerHTML =
+                "<h3>Hasil Kalkulator</h3>" +
+                "Angka 1 = " + a + "<br>" +
+                "Angka 2 = " + b + "<br>" +
+                "Operasi = " + operasi + "<br>" +
+                "<b>Hasil = " + hasil + "</b>";
+        }
+
+        function luasTrapesium() {
+            let a = parseFloat(prompt("Masukkan sisi atas (a):"));
+            let b = parseFloat(prompt("Masukkan sisi bawah (b):"));
+            let t = parseFloat(prompt("Masukkan tinggi (t):"));
+
+            let luas = (a + b) * t / 2;
+
+            document.getElementById("output").innerHTML =
+                "<h3>Luas Trapesium</h3>" +
+                "Sisi Atas = " + a + "<br>" +
+                "Sisi Bawah = " + b + "<br>" +
+                "Tinggi = " + t + "<br>" +
+                "<b>Luas = " + luas + "</b>";
+        }
+
+        function deretBilangan() {
+            let n = parseInt(prompt("Masukkan jumlah deret:"));
+            let deret = "";
+            let jumlah = 0;
+
+            for (let i = 1; i <= n; i++) {
+                deret += i + " ";
+                jumlah += i;
+            }
+
+            document.getElementById("output").innerHTML =
+                "<h3>Deret Bilangan</h3>" +
+                "Deret: " + deret + "<br>" +
+                "<b>Jumlah = " + jumlah + "</b>";
+        }
+
+        function PerkalianDengan2(b) {
+            return b * 2;
+        }
+
+        function perkalian() {
+            let b = parseInt(prompt("Masukkan angka:"));
+            let hasil = PerkalianDengan2(b);
+
+            document.getElementById("output").innerHTML =
+                "<h3>Perkalian Function</h3>" +
+                "Angka = " + b + "<br>" +
+                "<b>Hasil = " + hasil + "</b>";
+        }
+    </script>
+</body>
+
+</html>
