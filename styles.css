@@ -4,7 +4,7 @@
   --accent-color: #ffc107;
   --background-color: #f8f9fa;
   --card-background: #ffffff;
-  --text-color: #d5e0e0;
+  --text-color: #01b5bb;
   --border-color: #dee2e6;
   --shadow-color: rgba(0, 0, 0, 0.08);
 
@@ -89,7 +89,6 @@ nav {
   color: var(--primary-color);
 }
 
-/* Navigation Menu */
 #nav-menu {
   list-style: none;
   display: flex;
@@ -161,7 +160,6 @@ h2::after {
   border-radius: 2px;
 }
 
-/* Tombol (General Style) */
 button,
 .card-content a.btn {
   padding: 12.5px 20px;
@@ -185,7 +183,6 @@ button:hover,
 
 /* --- 5. SECTION SPESIFIK --- */
 
-/* Home/Hero Section */
 #home {
   background-color: var(--card-background);
   padding-top: 150px;
@@ -197,7 +194,6 @@ button:hover,
   margin-bottom: 30px;
 }
 
-/* Gallery & Practice Section Grid */
 .gallery,
 .practice-cards {
   display: grid;
@@ -208,7 +204,6 @@ button:hover,
   margin-top: 20px;
 }
 
-/* Card Styling */
 .card {
   background-color: var(--card-background);
   border: 1px solid var(--border-color);
@@ -280,7 +275,6 @@ button:hover,
 /* --- 6. MODAL (Gallery Image Popup) --- */
 .modal {
   display: none;
-  /* Disembunyikan secara default oleh JS */
   position: fixed;
   z-index: 2000;
   left: 0;
@@ -333,7 +327,7 @@ button:hover,
 
 /* --- 7. FOOTER --- */
 footer {
-  background-color: #15c6cc55;
+  background-color: #27272e55;
   color: var(--background-color);
   text-align: center;
   padding: 20px 5%;
@@ -343,14 +337,11 @@ footer {
 /* --- 8. MEDIA QUERIES (RESPONSIVITAS) --- */
 @media (max-width: 768px) {
 
-  /* Hamburger & Nav Toggle */
   .hamburger {
     display: block;
-    /* Tampilkan di mobile */
   }
 
   #nav-menu {
-    /* Sembunyikan secara default */
     position: absolute;
     top: 100%;
     left: 0;
@@ -365,9 +356,7 @@ footer {
   }
 
   #nav-menu.show {
-    /* Tampilkan saat kelas 'show' ditambahkan oleh JS */
     height: 250px;
-    /* Atur tinggi tetap yang cukup untuk semua link */
     padding: 10px 0;
   }
 
@@ -378,7 +367,6 @@ footer {
     text-align: left;
   }
 
-  /* Penyesuaian Teks */
   h1 {
     font-size: 2.2rem;
   }
@@ -392,14 +380,12 @@ footer {
     min-height: auto;
   }
 
-  /* Penyesuaian Modal */
   .modal-content {
     width: 95%;
   }
 }
 
 
-/* Animasi Hamburger ke X */
 .hamburger.open span:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -412,7 +398,7 @@ footer {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* From Uiverse.io by 3HugaDa3 */
+
 .cosmic-toggle {
   position: relative;
   width: 140px;
@@ -658,7 +644,6 @@ footer {
   }
 }
 
-/* Hover эффекты */
 .slider:hover .toggle-orb {
   filter: brightness(1.2);
   box-shadow:
@@ -681,12 +666,10 @@ footer {
   }
 }
 
-/* Активное состояние */
 .toggle:active+.slider .toggle-orb {
   transform: scale(0.95);
 }
 
-/* 3D эффект при наведении */
 .cosmic-toggle:hover .slider {
   transform: rotateX(10deg) rotateY(10deg);
 }
@@ -695,7 +678,6 @@ footer {
   transform: translateZ(10px);
 }
 
-/* Тень */
 .toggle:checked+.slider::after {
   content: "";
   position: absolute;
@@ -719,7 +701,6 @@ footer {
   }
 }
 
-/* From Uiverse.io by javierBarroso */
 .social-login-icons {
   display: flex;
   align-items: center;
@@ -824,14 +805,12 @@ footer {
   transform: translateY(-70px);
 }
 
-/* --- FIX ICON UNTUK DARK MODE --- */
 body.dark-mode .social-login-icons svg,
 body.dark-mode .icon svg {
   fill: #fff !important;
   opacity: 1 !important;
 }
 
-/* Jika latar icon hitam, ganti jadi lebih terang */
 body.dark-mode .social-icon-1,
 body.dark-mode .social-icon-2,
 body.dark-mode .social-icon-3,
@@ -847,7 +826,6 @@ body.dark-mode .social-icon-4 {
   --color-five: #ffbf4740;
   --time-animation: 2s;
   --size: 1;
-  /* You can change the size */
   position: relative;
   border-radius: 50%;
   transform: scale(var(--size));
