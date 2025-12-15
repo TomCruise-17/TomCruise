@@ -4,7 +4,7 @@
   --accent-color: #ffc107;
   --background-color: #f8f9fa;
   --card-background: #ffffff;
-  --text-color: #00b99a;
+  --text-color: #d5e0e0;
   --border-color: #dee2e6;
   --shadow-color: rgba(0, 0, 0, 0.08);
 
@@ -333,7 +333,7 @@ button:hover,
 
 /* --- 7. FOOTER --- */
 footer {
-  background-color: var(--text-color);
+  background-color: #15c6cc55;
   color: var(--background-color);
   text-align: center;
   padding: 20px 5%;
