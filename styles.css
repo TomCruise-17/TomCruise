@@ -1065,32 +1065,6 @@ body.dark-mode .social-icon-4 {
   animation: smooth-pulse 5.9s ease-in-out infinite 1s;
 }
 
-/* Container background */
-.jp-matrix-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-
-}
-
-/* Matrix itu sendiri */
-.jp-matrix {
-  width: 100vw;
-  height: 100vh;
-  min-width: unset;
-  min-height: unset;
-  background-color: #05050a;
-}
-
-.jp-matrix-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(5, 5, 10, 0.75);
-
-}
 
 @keyframes smooth-pulse {
 
@@ -1121,4 +1095,38 @@ body.dark-mode .social-icon-4 {
       0 0 15px #fff,
       0 0 20px #fff;
   }
+}
+
+/* ===========================
+   MATRIX BACKGROUND
+=========================== */
+
+.jp-matrix-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.jp-matrix {
+  width: 100vw;
+  height: 100vh;
+  background-color: #05050a;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  grid-auto-rows: 40px;
+  font-size: 32px;
+}
+
+/* overlay gelap agar teks terbaca */
+.jp-matrix-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 10, 0.75);
+}
+header, main, section {
+  position: relative;
+  z-index: 1;
 }
