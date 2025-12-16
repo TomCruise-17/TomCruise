@@ -112,7 +112,6 @@ nav {
 /* Hamburger Icon */
 .hamburger {
   display: none;
-  /* Sembunyikan di desktop */
   cursor: pointer;
   padding: 10px 5px;
 }
