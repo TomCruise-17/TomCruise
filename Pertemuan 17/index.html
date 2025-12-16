@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sistem Pemesanan Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .menu,
+    .pesanan {
+      background: #fff;
+      padding: 15px;
+      margin: 10px auto;
+      width: 400px;
+      border-radius: 8px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    button {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .total {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Sistem Pemesanan Menu</h1>
+
+  <div class="menu">
+    <h3>Daftar Menu</h3>
+    <div class="menu-item">
+      <span>Nasi Goreng</span>
+      <span>Rp 15000 <button onclick="tambah('Nasi Goreng',15000)">Pesan</button></span>
+    </div>
+    <div class="menu-item">
+      <span>Mie Ayam</span>
+      <span>Rp 12000 <button onclick="tambah('Mie Ayam',12000)">Pesan</button></span>
+    </div>
+    <div class="menu-item">
+      <span>Es Teh</span>
+      <span>Rp 5000 <button onclick="tambah('Es Teh',5000)">Pesan</button></span>
+    </div>
+  </div>
+
+  <div class="pesanan">
+    <h3>Pesanan Anda</h3>
+    <ul id="listPesanan"></ul>
+    <div class="total">Total: Rp <span id="total">0</span></div>
+  </div>
+
+  <script>
+    let total = 0;
+
+    function tambah(nama, harga) {
+      const li = document.createElement('li');
+      li.textContent = nama + ' - Rp ' + harga;
+      document.getElementById('listPesanan').appendChild(li);
+
+      total += harga;
+      document.getElementById('total').textContent = total;
+    }
+  </script>
+
+</body>
+
+</html>
